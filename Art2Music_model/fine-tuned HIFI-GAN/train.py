@@ -138,7 +138,7 @@ def train(rank, a, h):
                 print(f"DEBUG: After squeeze, x.shape = {x.shape}")
 
             if x.shape[1] != 80:
-                raise ValueError(f"❌ 输入给 Generator 的通道数不正确: {x.shape}, 期望 (batch_size, 80, T)")
+                raise ValueError(f"输入给 Generator 的通道数不正确: {x.shape}, 期望 (batch_size, 80, T)")
 
             # print(f"DEBUG: Before generator, x.shape = {x.shape}")  # 应该是 [batch_size, 80, T]
 
@@ -245,7 +245,7 @@ def train(rank, a, h):
 
                             if x.shape[1] != 80:
                                 raise ValueError(
-                                    f"❌ 输入给 Generator 的通道数不正确: {x.shape}, 期望 (batch_size, 80, T)")
+                                    f"输入给 Generator 的通道数不正确: {x.shape}, 期望 (batch_size, 80, T)")
 
                             # print(f"DEBUG: VAL Before generator, x.shape = {x.shape}")  # 应该是 [batch_size, 80, T]
 
